@@ -1,9 +1,8 @@
 from abc import ABC, abstractmethod
+from src.Gestion.Domain.Entities.Students import Students
 
-from src.Gestion.Domain.Entities.Student import Student
 
-
-class StudentPort(ABC):
+class StudentsPort(ABC):
     @abstractmethod
     def __init__(self):
         pass
@@ -17,9 +16,9 @@ class StudentPort(ABC):
         pass
 
     @abstractmethod
-    def create_student(self):
+    def create_student(self, students: Students):
         pass
 
     @abstractmethod
-    def update_student(self):
+    def update_student(self, student_uuid, tutor_uuid):
         pass
